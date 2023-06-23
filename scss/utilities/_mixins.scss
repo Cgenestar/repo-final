@@ -1,0 +1,38 @@
+
+
+@mixin grid ($columnas , $espacio){ 
+    display: grid;
+    grid-template-columns: repeat( $columnas , 1fr);
+    gap: $espacio;
+
+    @media only screen and (max-width:480px){
+        grid-template-columns:repeat(1,100%);
+        column-gap: 2px;
+        }
+      
+}
+
+
+@mixin nombreMixin { 
+    background-color: $color-1 ;
+    
+    @media only screen and (max-width:480px){
+        background-color: $color-3;
+        }
+      
+}
+
+@mixin bodyMixin { 
+    background-color: $color-4 ;
+    
+    @media only screen and (max-width:480px){
+        background-color: $color-1;
+        }
+      
+}
+
+@media only screen and (max-width:480px){
+    footer{
+        font-size: 10px;  
+    }
+    }
